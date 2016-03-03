@@ -1,61 +1,13 @@
 {
-    "name": "Apex Debugger",
-    "version": "0.3.9",
+    "name": "Whitelist IPs",
+    "version": "0.0.1",
     "manifest_version": 2,
-    "author": "Moti Korets",
-    "icons": { "16": "16.png",
-           "48": "48.png",
-          "128": "128.png" },
-    "description": "Debug Salesforce apex code with ease",
-    "background":{
-        "scripts": ["background.js"]
-    },
+    "author": "Ray Dehler",
+    "icons": { "16": "16.jpg",
+           "48": "48.jpg",
+          "128": "128.jpg" },
+    "description": "Whitelist All IPs for a Salesforce organization",
     "content_scripts": [
-        {
-            "css": [
-                "debug.css"
-            ],
-            "matches": [
-                "https://*.salesforce.com/p/setup/layout/ApexDebugLogDetailEdit/*"
-            ],
-            "js": [
-                "mousetrap.min.js",
-                "beautify.js",
-                "beautify-html.js",
-                "sfdc.debug.js"
-            ],
-            "run_at": "document_end"
-        },
-        {
-            "matches": [
-                "https://*.salesforce.com/setup/ui/listApexTraces.apexp*"
-            ],
-            "js": [
-                "sfdc.debug.btn.js"
-            ],
-            "run_at": "document_end"
-        },
-        {
-            "matches": [
-                "https://*.force.com/*",
-                "https://*.salesforce.com/*"
-            ],
-            "js": [
-                "mousetrap.min.js",
-                "shortcuts.js"
-            ],
-            "run_at": "document_end"
-        },
-        {
-            "matches": [
-                "https://*.salesforce.com/01p*",
-                "https://*.salesforce.com/setup/build/allTriggers.apexp*"
-            ],
-            "js": [
-                "sfdc.classes.js"
-            ],
-            "run_at": "document_end"
-        },
         {
             "matches": [
                 "https://*.salesforce.com/05G*"

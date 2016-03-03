@@ -1,4 +1,3 @@
-// Big thank you to Ray Dehler which inspired this script - http://raydehler.com/cloud/clod/enable-all-trusted-ip-ranges-for-a-salesforce-org.html
 (function(){
 
 var sid = document.cookie.match(/(^|;\s*)sid=(.+?);/)[2],
@@ -20,7 +19,7 @@ function addButton(){
     var allowAllButton = document.createElement('input');
     allowAllButton.type = 'button';
     allowAllButton.className = 'btn';
-    allowAllButton.value = 'Allow All Ranges (!)';
+    allowAllButton.value = 'Whitelist All IPs';
     allowAllButton.onclick = allowAll;
     if(pbButton) pbButton.appendChild(allowAllButton);
 }
