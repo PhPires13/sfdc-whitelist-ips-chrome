@@ -11,4 +11,4 @@ Key Features
 Chrome extension installation
 -----------------------------
 
-TBD
+  * https://chrome.google.com/webstore/detail/whitelist-all-ips-for-sal/nnlnikmkkbpgioojghgojoejgcheilic
