@@ -11,7 +11,6 @@
     const IP_RANGE = 255;
     const counterElement = document.createElement('p');
 
-    addButton();
     initCounterElement();
 
     function initCounterElement() {
@@ -19,14 +18,14 @@
         counterElement.id = 'ipCounter';
     }
 
-    function addButton() {
-        const pbButton = document.querySelector('.pbButton');
-        const allowAllButton = document.createElement('input');
-        allowAllButton.type = 'button';
-        allowAllButton.className = 'btn';
-        allowAllButton.value = 'Whitelist All IPs';
-        allowAllButton.onclick = allowAll;
-        if (pbButton) pbButton.appendChild(allowAllButton);
+    // Add message listener for extension popup
+    if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.onMessage) {
+        chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+            if (request && request.action === 'whitelistAllIps') {
+                allowAll();
+                sendResponse({status: 'started'});
+            }
+        });
     }
 
     function createLoadingImage() {

@@ -9,6 +9,9 @@
         "48": "48.jpg",
         "128": "128.jpg"
     },
+    "action": {
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
             "matches": [
