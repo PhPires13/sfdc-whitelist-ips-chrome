@@ -26,6 +26,6 @@
     "host_permissions": [
         "https://*.force.com/*",
         "https://*.salesforce.com/*",
-        "https://*.scratch.my.salesforce-setup.com/*"
+        "https://*.my.salesforce-setup.com/*"
     ]
 }
