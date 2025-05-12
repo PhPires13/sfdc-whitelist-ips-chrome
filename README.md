@@ -11,3 +11,8 @@ Browser extension to Whitelist all IPs for Salesforce.
     - Enable `Developer mode` on the top right
     - Click `Load unpacked` on the top left
       - Select the repository root folder
+
+## Usage
+  - Go to the `Security`/`Network Access` on Setup Home
+  - Use the action to generate the following ranges
+    ![usage](img/usage.png)

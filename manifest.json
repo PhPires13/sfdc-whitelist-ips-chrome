@@ -5,9 +5,9 @@
     "manifest_version": 3,
     "description": "Whitelist All IPs for a Salesforce organization",
     "icons": {
-        "16": "16.jpg",
-        "48": "48.jpg",
-        "128": "128.jpg"
+        "16": "img/16.jpg",
+        "48": "img/48.jpg",
+        "128": "img/128.jpg"
     },
     "action": {
         "default_popup": "popup.html"
