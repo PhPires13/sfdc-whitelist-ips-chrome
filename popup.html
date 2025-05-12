@@ -2,12 +2,67 @@
 <html>
   <head>
     <style>
-      body { min-width: 200px; }
-      button { width: 100%; padding: 8px; }
+      body {
+        min-width: 180px;
+        min-height: 50px;
+        background: #fff;
+        font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+      .card {
+        background: #fff;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 180px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      button {
+        width: 94%;
+        border-style: solid;
+        border-color: #e0f3fb;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #3eb0ef 0%, #009cdb 100%);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(80,191,255,0.10);
+        transition: background 0.2s, box-shadow 0.2s, transform 0.1s, border-color 0.2s;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        gap: 8px;
+      }
+      button:hover, button:focus {
+        background: linear-gradient(90deg, #009cdb 0%, #3eb0ef 100%);
+        box-shadow: 0 4px 16px rgba(80,191,255,0.18);
+        transform: translateY(-1px) scale(1.01);
+        border-color: #b6e6fa;
+      }
+      .arrow {
+        font-size: 18px;
+        opacity: 0.7;
+        margin-left: auto;
+      }
     </style>
   </head>
   <body>
-    <button id="whitelistBtn">Whitelist All IPs</button>
+    <div class="card">
+      <button id="whitelistBtn">
+        Whitelist All IPs
+        <span class="arrow">&#8250;</span>
+      </button>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
