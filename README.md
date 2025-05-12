@@ -1,14 +1,13 @@
-Salesforce Whitelist All IPs
-===============
+# Salesforce Whitelist All IPs
 
 Browser extension to Whitelist all IPs for Salesforce.
 
-Key Features
-------------
+## Key Features
+  - Whitelist IPs
 
-  * Whitelist IPs
-
-Chrome extension installation
------------------------------
-
-  * https://chrome.google.com/webstore/detail/whitelist-all-ips-for-sal/nnlnikmkkbpgioojghgojoejgcheilic
+## Installation
+  - `Clone`/`Fork`/`Download` this repository to your machine
+  - Navigate to ```chrome://extensions/```
+    - Enable `Developer mode` on the top right
+    - Click `Load unpacked` on the top left
+      - Select the repository root folder
