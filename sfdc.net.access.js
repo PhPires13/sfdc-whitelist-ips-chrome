@@ -1,4 +1,10 @@
 (() => {
+    // Only run on Classic Network Access or Lightning Setup pages
+    if (!/\/05G(\/|$)/.test(window.location.pathname) &&
+        !/\/lightning\/setup\//.test(window.location.pathname)) {
+        return;
+    }
+
     // Improved cookie parsing for sid
     const sidMatch = document.cookie.match(/(?:^|;\s*)sid=([^;]+)/);
     const sid = sidMatch ? sidMatch[1] : null;
@@ -23,7 +29,7 @@
         chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             if (request && request.action === 'whitelistAllIps') {
                 allowAll();
-                sendResponse({status: 'started'});
+                sendResponse({ status: 'started' });
             }
         });
     }
