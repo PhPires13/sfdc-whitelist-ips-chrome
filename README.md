@@ -1,9 +1,9 @@
-# Salesforce Whitelist All IPs
+# Salesforce Whitelist All IPs ![logo](img/48.jpg)
 
 Browser extension to Whitelist all IPs for Salesforce.
 
 ## Key Features
-  - Whitelist IPs
+  - Whitelist all IP ranges
 
 ## Installation
   - `Clone`/`Fork`/`Download` this repository to your machine
