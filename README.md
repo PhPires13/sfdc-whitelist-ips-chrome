@@ -1,6 +1,6 @@
 # Salesforce Whitelist All IPs ![logo](img/48.jpg)
 
-Browser extension to Whitelist all IPs for Salesforce.
+Browser extension to Whitelist all IPs for Salesforce. Removing the nedd for email code verification on login.
 
 ## Key Features
   - Whitelist all IP ranges
