@@ -1,5 +1,4 @@
 # Salesforce Whitelist All IPs ![logo](img/48.jpg)
-
   - Browser extension to Whitelist all IPs for Salesforce.
   - Removes the email code verification on login.
 
