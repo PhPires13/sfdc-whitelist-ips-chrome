@@ -20,7 +20,6 @@
     if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.onMessage) {
         chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             if (request && request.action === 'whitelistAllIps') {
-                // Notify popup that loading has started
                 chrome.runtime.sendMessage({type: 'whitelistProgress', status: 'started'});
                 allowAll();
                 sendResponse({ status: 'started' });
@@ -29,12 +28,9 @@
     }
 
     function allowAll() {
-        if (confirm('This will allow users to connect from every computer without verification code or security token. This might present a security threat. Would you like to proceed?')) {
-            for (let i = 0; i <= IP_RANGE; i += 2) {
-                addIp(i);
-            }
-        } else {
-            chrome.runtime.sendMessage({type: 'whitelistProgress', status: 'done'});
+        // Removed confirm dialog, always proceed
+        for (let i = 0; i <= IP_RANGE; i += 2) {
+            addIp(i);
         }
     }
 

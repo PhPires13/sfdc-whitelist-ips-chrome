@@ -2,6 +2,10 @@ const whitelistBtn = document.getElementById('whitelistBtn');
 const arrowSpan = whitelistBtn.querySelector('.arrow');
 const originalArrow = arrowSpan.innerHTML;
 
+const confirmDialog = document.getElementById('confirmDialog');
+const confirmYes = document.getElementById('confirmYes');
+const confirmNo = document.getElementById('confirmNo');
+
 // Add a counter element below the button if not present
 let counter = document.getElementById('progressCounter');
 if (!counter) {
@@ -36,12 +40,29 @@ function setError(msg) {
 }
 
 whitelistBtn.addEventListener('click', () => {
+  // Show confirmation dialog instead of starting immediately
+  whitelistBtn.style.display = 'none';
+  confirmDialog.style.display = 'block';
+  setCounter('');
+  counter.style.color = '';
+});
+
+confirmYes.addEventListener('click', () => {
+  confirmDialog.style.display = 'none';
+  whitelistBtn.style.display = '';
   setLoading(true);
   setCounter('');
   counter.style.color = '';
   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, {action: 'whitelistAllIps'});
   });
+});
+
+confirmNo.addEventListener('click', () => {
+  confirmDialog.style.display = 'none';
+  whitelistBtn.style.display = '';
+  setCounter('');
+  counter.style.color = '';
 });
 
 // Listen for messages from the content script about progress
